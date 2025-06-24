@@ -1,0 +1,356 @@
+/* Black/Dark SaaS Theme */
+:root {
+    --bg-main: #101014;
+    --bg-card: #18181d;
+    --bg-header: #18181d;
+    --bg-footer: #18181d;
+    --text-main: #f5f5f7;
+    --text-light: #b0b0b8;
+    --text-dark: #222;
+    --accent: #6c63ff;
+    --accent-hover: #5146e1;
+    --border: #23232b;
+    --success: #1ed760;
+    --error: #ff4d4f;
+}
+
+body {
+    background: var(--bg-main);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: var(--text-main);
+}
+.site-header, .site-footer {
+    background: var(--bg-header);
+    color: #fff;
+    padding: 18px 0 14px 0;
+    text-align: center;
+    border-bottom: 1.5px solid var(--border);
+}
+.site-footer {
+    background: var(--bg-footer);
+    border-top: 1.5px solid var(--border);
+    margin-top: 48px;
+    font-size: 1em;
+    padding-bottom: 12px;
+}
+.site-header nav, .site-footer nav {
+    margin: 0 auto;
+    display: inline-block;
+}
+.site-header nav a, .site-footer nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+.site-header nav a:hover, .site-footer nav a:hover {
+    color: var(--accent);
+}
+.logo-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.logo-sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    vertical-align: middle;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.08);
+}
+.content {
+    max-width: 900px;
+    margin: 32px auto 32px auto;
+    background: var(--bg-card);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    padding: 40px 32px 32px 32px;
+}
+.container {
+    background: var(--bg-card);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    padding: 40px 32px 32px 32px;
+    max-width: 480px;
+    width: 100%;
+    margin: 32px auto;
+}
+h1, h2, h3 {
+    color: #fff;
+    font-weight: 800;
+    margin-top: 0;
+}
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+}
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+h3 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+.subtitle, .tagline {
+    text-align: center;
+    color: var(--accent);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.platform {
+    background: #23232b;
+    padding: 5px 13px;
+    border-radius: 15px;
+    font-size: 13px;
+    border: 1.5px solid var(--accent);
+    font-weight: 500;
+    color: var(--accent);
+    box-shadow: 0 2px 6px rgba(108,99,255,0.07);
+}
+.input-group, .checkbox-group {
+    margin-bottom: 22px;
+}
+label {
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    display: block;
+}
+input[type="url"], input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    outline: none;
+    background: #18181d;
+    color: var(--text-main);
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+input[type="url"]:focus, input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--accent);
+}
+.checkbox-group input[type="checkbox"] {
+    accent-color: var(--accent);
+    margin-right: 8px;
+}
+.download-btn, .cta-btn, button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.10);
+    transition: background 0.2s, transform 0.2s;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.download-btn:hover, .cta-btn:hover, button[type="submit"]:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+}
+.download-btn:disabled {
+    background: #333;
+    cursor: not-allowed;
+    transform: none;
+}
+.status {
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    display: none;
+    background: #23232b;
+    color: var(--text-main);
+    border: 1.5px solid var(--accent);
+}
+.status.success {
+    background: #1e2d1e;
+    color: var(--success);
+    border: 1.5px solid var(--success);
+}
+.status.error {
+    background: #2d1e1e;
+    color: var(--error);
+    border: 1.5px solid var(--error);
+}
+.loader {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 4px solid var(--accent);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.pricing-table {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 32px 0;
+    flex-wrap: wrap;
+}
+.pricing-tier {
+    background: #23232b;
+    border: 2px solid var(--accent);
+    border-radius: 14px;
+    padding: 32px 24px 24px 24px;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.08);
+    text-align: center;
+}
+.pricing-tier.featured {
+    border: 2.5px solid var(--accent);
+    background: #18181d;
+    box-shadow: 0 4px 16px rgba(108,99,255,0.13);
+}
+.pricing-tier h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+.price {
+    font-size: 2.1em;
+    font-weight: 800;
+    color: #fff;
+    margin: 12px 0 18px 0;
+}
+.price span {
+    font-size: 0.5em;
+    color: var(--accent);
+}
+.pricing-tier ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    color: var(--text-light);
+}
+.pricing-tier ul li {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+}
+.team-list li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+.contact-form {
+    max-width: 420px;
+    margin: 0 auto 32px auto;
+    background: #23232b;
+    padding: 24px 18px 18px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108,99,255,0.07);
+}
+.contact-form label {
+    margin-top: 8px;
+}
+.contact-form button {
+    margin-top: 12px;
+}
+.contact-info {
+    margin-top: 32px;
+    background: #18181d;
+    padding: 18px 18px 12px 18px;
+    border-radius: 10px;
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(108,99,255,0.04);
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--accent);
+    font-size: 0.95em;
+}
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.download-link:hover {
+    background: var(--accent-hover);
+}
+blockquote {
+    background: #23232b;
+    color: var(--text-light);
+    border-left: 4px solid var(--accent);
+    margin: 18px 0;
+    padding: 16px 18px;
+    border-radius: 8px;
+    font-style: italic;
+}
+.hero-desc {
+    color: var(--text-light);
+    font-size: 1.2em;
+    margin-bottom: 18px;
+}
+.features ul {
+    color: var(--text-light);
+    margin-left: 18px;
+    margin-bottom: 18px;
+}
+.faq h3 {
+    color: var(--accent);
+    margin-top: 18px;
+}
+@media (max-width: 900px) {
+    .content, .container {
+        padding: 18px 6vw 18px 6vw;
+    }
+    .pricing-table {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+@media (max-width: 600px) {
+    .content, .container {
+        padding: 10px 2vw 10px 2vw;
+        max-width: 99vw;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    .logo-sm {
+        width: 28px;
+        height: 28px;
+    }
+} 
